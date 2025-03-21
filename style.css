@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: #35badb;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.186);
+}
+
+header .logo{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 750;
+}
+
+
+header menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: end;
+    height: 100%;
+}
+
+header menu a{
+    color: white;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.menu-active::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* les codes css pour le profils de la page d'acceuil */
+
+body .profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 25px 100px;
+    gap: 25px;
+}
+
+body .profil .image-profil img{
+    width: 420px;
+}
+
+body .profil .details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profil .details h1{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.profil .details h1 span{
+    color: #35badb;
+}
+
+.profil .details p{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #2f2f2f
+}
+
+.profil .details button{
+    background-color: #35badb;
+    height: 40px;
+    border: none;
+    color: white;
+    width: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.profil .details .l-r-sociaux{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+}
+
+.profil .details .l-r-sociaux h4{
+    color: #2f2f2f;
+    font-weight: 520;
+    text-transform: capitalize;
+}
+
+.profil .details .l-r-sociaux img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+
+/* Compétences css codes */
+
+.competances{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 100px;
+    height: 100vh;
+    background-color: #e3e3e3;
+    align-items: center;
+}
+
+.competances h1{
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: #2f2f2f;
+}
+
+.competances .detail-competances{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.competances .detail-competances .detail{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 34px;
+    padding: 20px;
+}
+.competances .detail-competances .detail:nth-child(3){
+    text-align: right;
+}
+.competances .detail-competances .detail:nth-child(2){
+    text-align: center;
+    border-left: 0.1px solid #C1C1c0;
+    border-right: 0.1px solid #c1c0c0;
+    width: 300px;
+}
+.competances .detail-competances .detail h3{
+    text-transform: uppercase;
+    color: #35badb;
+}
+
+.competances .detail-competances .detail ul{
+    list-style: none;
+}
+.competances .detail-competances .detail ul li{
+    text-transform: uppercase;
+}
+
+/* code pour footer  */
+
+footer{
+    height: 30vh;
+    background-color: #35badb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+footer h4{
+    font-size: 18px;
+    font-weight: 420;
+    text-transform: initial;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+footer .top-row{
+    font-weight: 540;
+    color: white;
+    rotate: -90deg;
+    text-decoration: none;
+    position:absolute;
+    top: -25px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 5px 20px rgb(94, 145, 171);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #35badb;
+    animation: top-row 2.7s ease-out infinite;
+}
+
+
+/* contact section css code */
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #35badb;
+    flex-direction: column;
+}
+
+.contact-container h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-container form{
+    width: 80%;
+    /* height: 80%; */
+    background-color: rgb(255, 255, 255);
+    padding: 30px 20px;
+    border-radius: 12px;
+}
+
+.contact-container form .input-box{
+    /* height: 70px; */
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 1.4rem;
+    flex-direction: column;
+    border: 2px solid #d8d8d8;
+
+}
+.name-lastname{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.name-lastname .input-box{
+    width: 100%;
+}
+.input-box label{
+    font-size: 12px;
+    color: #bbb;
+}
+.input-box input{
+    height: 35px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+}
+.input-box textarea{
+    margin-top: 10px;
+    height: 150px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+form .send-message-btn{
+    height: 50px;
+    width: 40%;
+    background-color: #35badb;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+}
+/* Animation code css */
+
+
+@keyframes top-row {
+    0%{top: -27px}50%{top:25px}100%{top: -27px}
+}
