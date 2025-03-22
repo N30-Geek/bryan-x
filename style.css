@@ -47,7 +47,26 @@ header menu a{
     position: relative;
 }
 
+.menu-button{
+    display: none;
+    background: transparent;
+    border:  none;
+    outline: none;
+    cursor:  pointer;
 
+}
+
+.menu-button .material-symbols-outlined{
+    color: white;
+    font-weight: 550;
+    font-size: 35px;
+    transition: scale 0.3s ease;
+}
+
+
+.menu-button .material-symbols-outlined:hover{
+    scale: 1.2;
+}
 .menu-active::after{
     position: absolute;
     content: "";
@@ -64,9 +83,10 @@ body .profil{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 25px 100px;
     gap: 25px;
+    padding-top: 100px;
 }
 
 body .profil .image-profil img{
@@ -134,7 +154,7 @@ body .profil .details{
     justify-content: center;
     flex-direction: column;
     padding: 25px 100px;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #e3e3e3;
     align-items: center;
 }
@@ -232,12 +252,13 @@ footer .top-row{
 /* contact section css code */
 
 .contact-container{
-    height: 100vh;
+    height: max-content;
+    padding: 100px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 100px;
-    background-color: #35badb;
+    padding: 50px 100px;
+    background-color: #b7e0eb;
     flex-direction: column;
 }
 
@@ -247,8 +268,8 @@ footer .top-row{
 }
 
 .contact-container form{
-    width: 80%;
-    /* height: 80%; */
+    width: 60%;
+    height: 75%;
     background-color: rgb(255, 255, 255);
     padding: 30px 20px;
     border-radius: 12px;
@@ -258,7 +279,7 @@ footer .top-row{
     /* height: 70px; */
     background-color: white;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 10px;
     display: flex;
     margin-bottom: 1.4rem;
     flex-direction: column;
@@ -275,14 +296,19 @@ footer .top-row{
     width: 100%;
 }
 .input-box label{
-    font-size: 12px;
+    font-size: 14px;
     color: #bbb;
+    margin-left: 5px;
 }
 .input-box input{
-    height: 35px;
+    height: 25px;
+    padding: 0 5px;
     outline: none;
     border-radius: 8px;
     border: none;
+    font-size: 14px;
+    color:#525151;
+    font-weight: 600;
 }
 .input-box textarea{
     margin-top: 10px;
@@ -290,6 +316,11 @@ footer .top-row{
     resize: none;
     border: none;
     outline: none;
+    padding: 0 5px;
+    color: #2f2f2f;
+    font-weight: 600;
+    font-size: 14px;
+    color:#525151;
 }
 
 form .send-message-btn{
@@ -307,3 +338,76 @@ form .send-message-btn{
 @keyframes top-row {
     0%{top: -27px}50%{top:25px}100%{top: -27px}
 }
+
+
+@media (max-width: 950px) {
+    .profil img{
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 736px){
+    header, 
+    footer,
+    .profil,
+    .competances{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    header{
+        flex-direction: row;
+        height: max-content;
+        align-items: start;
+        gap: 80px;
+        height: max-content;
+        position: relative;
+    }
+    header menu{
+        display: none;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        bottom: 0;
+        background-color: #35badb;
+        font-size: 14px;
+    }
+
+    header .menu-button{
+        display: flex;
+    }
+}
+
+@media (max-width: 480px){
+    header{
+        padding: 50px;
+        flex-direction: row;
+        height: max-content;
+        align-items: start;
+        gap: 80px;
+        position: relative;
+    }
+    header menu{
+        display: none;
+        flex-direction: column;
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        padding: 20px;
+        background-color: #35badb;
+        gap: 1rem;
+    }
+    header menu a.menu-active::after{
+        display: none;
+    }
+}   
+
+
